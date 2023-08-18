@@ -1,1 +1,3 @@
-.dada.db
+data.db
+/__pycache__
+/env

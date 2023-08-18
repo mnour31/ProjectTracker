@@ -15,8 +15,9 @@ def check_name_project(projectname):
     cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", (projectname,))
     if cur.fetchone() !=  None:
         print(f"this name '{projectname}' already exists")
-        close_db()
-        exit()
+        return True
+    else:
+        return False
 
 def close_db():
     con.close()
